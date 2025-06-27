@@ -7,7 +7,7 @@ function App() {
   return (
     <>
    <Chai/>
-   <h1>Chai aur React {username} </h1>
+   <h1>Chai {username} </h1>
 </>
   )}
   export default App;
