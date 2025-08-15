@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Full HTML + CSS Demo</title>
+  <style>
+    /* Reset basic margins */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Global styles */
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background: #333;
+      color: white;
+      padding: 10px;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+    nav li {
+      margin-right: 20px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Box Model Example */
+    .box {
+      background: lightblue;
+      padding: 20px;
+      border: 5px solid navy;
+      margin: 20px 0;
+      width: 300px;
+    }
+
+    /* Flexbox Example */
+    .flex-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background: #ddd;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .flex-item {
+      background: lightcoral;
+      padding: 20px;
+      flex: 1;
+      margin: 0 10px;
+      text-align: center;
+    }
+
+    /* Grid Example */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      background: #eee;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .grid-item {
+      background: lightgreen;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Table Styling */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 20px 0;
+    }
+    table, th, td {
+      border: 1px solid #333;
+      padding: 10px;
+    }
+    th {
+      background: #555;
+      color: white;
+    }
+
+    /* Form Styling */
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 5px;
+      margin: 20px 0;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    }
+    form input, form select, form textarea {
+      width: 100%;
+      margin: 10px 0;
+      padding: 8px;
+    }
+    form input[type="submit"] {
+      background: #333;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    form input[type="submit"]:hover {
+      background: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#lists">Lists</a></li>
+      <li><a href="#table">Table</a></li>
+      <li><a href="#form">Form</a></li>
+      <li><a href="#flex">Flexbox</a></li>
+      <li><a href="#grid">Grid</a></li>
+    </ul>
+  </nav>
+
+  <!-- Lists -->
+  <section id="lists">
+    <h2>Lists</h2>
+    <ul>
+      <li>Unordered item 1</li>
+      <li>Unordered item 2</li>
+    </ul>
+    <ol>
+      <li>Ordered item 1</li>
+      <li>Ordered item 2</li>
+    </ol>
+  </section>
+
+  <!-- Box Model -->
+  <section>
+    <h2>Box Model</h2>
+    <div class="box">This box has padding, border, and margin.</div>
+  </section>
+
+  <!-- Table -->
+  <section id="table">
+    <h2>Table</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Nevil</td>
+          <td>16</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Form -->
+  <section id="form">
+    <h2>Form</h2>
+    <form action="">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+
+      <textarea name="message" rows="4" placeholder="Your message"></textarea>
+
+      <select name="country">
+        <option value="in">India</option>
+        <option value="usa">USA</option>
+      </select>
+
+      <p>Gender:</p>
+      <input type="radio" name="gender" value="male"> Male
+      <input type="radio" name="gender" value="female"> Female
+
+      <p>
+        <input type="checkbox" name="subscribe" checked> Subscribe to newsletter
+      </p>
+
+      <input type="submit" value="Send">
+    </form>
+  </section>
+
+  <!-- Flexbox -->
+  <section id="flex">
+    <h2>Flexbox</h2>
+    <div class="flex-container">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </div>
+  </section>
+
+  <!-- Grid -->
+  <section id="grid">
+    <h2>CSS Grid</h2>
+    <div class="grid-container">
+      <div class="grid-item">1</div>
+      <div class="grid-item">2</div>
+      <div class="grid-item">3</div>
+      <div class="grid-item">4</div>
+      <div class="grid-item">5</div>
+      <div class="grid-item">6</div>
+    </div>
+  </section>
+
+  <!-- Multimedia -->
+  <section>
+    <h2>Multimedia</h2>
+    <video controls width="400">
+      <source src="video.mp4" type="video/mp4">
+      Your browser does not support video.
+    </video>
+
+    <iframe src="https://example.com" width="500" height="300"></iframe>
+  </section>
+
+</body>
+</html>
