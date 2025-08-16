@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="title">Hello</h1>
+  <button class="btn">Click Me</button>
+</body>
+
+<script>
+  let heading = document.getElementById("title");
+  let button = document.querySelector(".btn");
+  let allButtons = document.querySelectorAll("button");
+heading.textContent = "Hello World";
+heading.style.color = "blue";
+button.style.backgroundColor = "yellow";
+heading.classList.add("highlight");
+heading.classList.remove("highlight");
+heading.classList.toggle("highlight"); // add/remove automatically
+button.addEventListener("click", () => {
+  heading.textContent = "You clicked the button!";
+  heading.style.color = "blue";
+});
+let newPara = document.createElement("p");
+newPara.textContent = "I am a new paragraph!";
+document.body.appendChild(newPara); // adds at end of body
+newPara.remove(); // deletes it
+
+</script>
+</html>

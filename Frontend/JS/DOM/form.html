@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Form Example</title>
+</head>
+<body>
+  <h2>DOM Input + Form Demo</h2>
+
+  <!-- Form -->
+  <form id="myForm">
+    <label for="username">Enter your name: </label>
+    <input type="text" id="username" placeholder="Type something..." />
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    // Select input
+    let input = document.querySelector("input");
+
+    // When user types
+    input.addEventListener("input", (e) => {
+      console.log("Value:", e.target.value);
+    });
+
+    // Form submission
+    document.querySelector("form").addEventListener("submit", (e) => {
+      e.preventDefault(); // stop page refresh
+      console.log("Form submitted!");
+    });
+  </script>
+</body>
+</html>
